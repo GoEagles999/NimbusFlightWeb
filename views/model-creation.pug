@@ -1,0 +1,38 @@
+html
+  head
+    title= title
+    //BOOTSTRAP CSS
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+
+    // jQuery
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
+
+    //Optional theme
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css", integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp", crossorigin="anonymous")
+    
+    //BOOTSTRAP JAVASCRIPT
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+
+    link(rel='stylesheet', href='/stylesheets/public-private.css')
+    script(src='/javascripts/socket.io.js')
+    link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900', rel='stylesheet', type='text/css')
+    link(href='css/vitality-blue.css', rel='stylesheet', type='text/css')
+
+  body#page-top
+    include ./header-logged-in.pug
+    .container-fluid
+      .panel.panel-default
+        .panel-heading
+          h3 Model Creation
+        .panel-body
+          h4(style='margin-left:30px;') Upload Drone Imagery
+          div#processImages(style='display:block; padding:10px 10px 10px 30px;' hidden)
+            form(method='POST' enctype='multipart/form-data' action='/upload-image')
+              .form-group(style='width:200px;')
+                input.form-control(type='file' name='image' id='image' multiple)
+              button.btn.btn-success(type='submit') Upload
+          button#getBucketObjects(style='margin-left:30px;margin-bottom:10px;') Load Currently Uploaded Images
+          div#container-for-images(style='width:375px;height:100px;margin-left:30px;')
+    script(src='/javascripts/model-creation.js')

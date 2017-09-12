@@ -1,0 +1,102 @@
+//declare variable for map, polygon-points array and markers array
+var map;
+var polygonPoints = new Array();
+var markers = new Array();
+var polygon;
+
+//initialize map 
+//declare all map-related functions here
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 51.509, lng: -.118},
+    zoom: 15
+})
+
+map.addListener('click', function(event) {
+
+addMarker(event.latLng)
+addPolygonPoint(event.latLng)
+})
+        
+function addMarker(location) {
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  marker.setDraggable(true)
+  logMarkerInfo(marker)
+  markers.push(marker);
+}
+
+function addPolygonPoint(location) {
+  
+  polygonPoints.push(location)
+  polygon = new google.maps.Polygon({
+    paths: polygonPoints,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35
+  })
+  polygon.setMap(map)
+}
+
+
+function setMapOnAll(map) {
+  //step through each marker and call setMap()
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
+
+function clearMarkers() {
+  setMapOnAll(null)
+  //reset markers array
+  markers = []
+  //reset polygon-points array
+  polygonPoints = []
+}
+
+function logMarkerInfo(markerobject){
+  google.maps.event.addListener(markerobject, 'drag', function(evt){
+    console.log("marker is being dragged");
+  });
+  google.maps.event.addListener(markerobject, 'click', function(evt){
+    console.log("marker is clicked");
+  });
+  google.maps.event.addListener(markerobject, 'dragstart', function(evt){
+    console.log("marker started to be dragged");
+  });
+  google.maps.event.addListener(markerobject, 'dragend', function(evt){
+    console.log("marker ended to be dragged");
+  });
+}
+}
+//end of map init
+
+//menu navigation
+function showonlyone(clicked) {
+  $('.content').each(function(index) {
+    if ($(this).attr("id") == clicked) {
+      $(this).show(400)}
+    else {
+      $(this).hide(200);
+    }
+  }
+)}
+
+//ui buttons
+function showBox(clicked) {
+  $('.boxes').each(function(index) {
+    if ($(this).attr("id") == clicked) {
+      $(this).show(400)}
+    else {
+      $(this).hide(200);
+    }
+  }
+)}
+
+$('#imageProcessing').on('click', function () {
+$('#container').append('<div style="position:absolute;z-index:3;height:300px;width:300px;background-color: grey;top:50px;left:500px;"><form action="/file-upload", method="post", enctype="multipart/form-data"><input type="file", name="displayImage", id="file"></input><input type="submit"></input></form></div>')
+})

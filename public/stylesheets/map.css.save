@@ -1,0 +1,265 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+#container {
+  width:100%;
+  height:100%;
+}
+
+#add-btn {
+  top:270px;
+  left:40px;
+}
+
+#sync-data-btn {
+  top:470px;
+  left:40px;
+}
+
+#user-info-btn {
+  top:70px;
+  right:40px;
+}
+
+#locate-btn{
+  top:70px;
+  left:40px
+}
+
+#add-box {
+  top:270px;
+  left:90px;
+  height: 80px;
+  width: 180px;
+  border-radius:10px;
+  box-sizing: border-box;
+}
+
+#sync-data-box {
+  top:470px;
+  left:90px;
+  height: 80px;
+  width: 180px;
+  border-radius:10px;
+  box-sizing: border-box;
+}
+
+#user-info-box {
+  top:70px;
+  right:90px;
+  height: 120px;
+  width: 180px;
+  border-radius:10px;
+  box-sizing: border-box;
+}
+
+#locate-box {
+  top:70px;
+  left:90px;
+  height: 80px;
+  width: 180px;
+  border-radius:10px;
+  box-sizing: border-box;
+}
+
+#myLocation:hover {
+  background-color:white;
+  color:black;
+  border-radius:10px 10px 0px 0px;
+}
+
+#addNewFlight:hover {
+  background-color:white;
+  color:black;
+  border-radius:10px 10px 0px 0px;
+}
+
+#processImages:hover {
+  background-color: white;
+  border-radius:0px 0px 10px 10px;
+  color:black;
+}
+
+#flightPlans:hover {
+  background-color:white;
+  color:black;
+  border-radius:10px 10px 0px 0px;
+}
+
+#models:hover {
+  background-color: white;
+  color:black;
+}
+
+#telemetryLogs:hover {
+  background-color: white;
+  border-radius:0px 0px 10px 10px;
+  color:black;
+}
+
+#myAccount:hover {
+  background-color:white;
+  color:black;
+  border-radius:10px;
+}
+
+#upgrade:hover {
+  background-color: white;
+  border-radius:0px 0px 10px 10px;
+  color:black;
+}
+
+#myLocation:hover {
+  background-color:white;
+  color:black;
+  border-radius:10px;
+}
+
+#searchCoordinates:hover {
+  background-color:white;
+  color:black;
+  border-radius:10px;
+}
+
+
+.boxes {
+  position: absolute;
+  z-index:2;
+  color: white;
+  cursor: pointer;
+  background-color:black;
+}
+
+.buttons {
+  position:absolute;
+  height:45px;
+  width:45px;
+  cursor: pointer;
+  background-color:#000000;
+  z-index:2;
+  opacity: 1;
+  border-radius:25px;
+}
+
+#map {
+  height: 100%;
+  float: right;
+  width: 100%;
+}
+
+#sidebar {
+  height: 100%;
+  border: 1px solid grey;
+  width: 360px;
+  overflow: scroll;
+  background-color: white;
+  position: absolute;
+  float: left;
+}
+
+ul {
+  width: 360px;
+  margin: 0;
+  padding: 0;
+  color:white;
+  height: 40px;
+  list-style-type: none;
+}
+
+li {
+  text-align: center;
+  color:white;
+  display: block;
+  width: 180px;
+  padding-top: 11px;
+  margin-bottom:10px;
+  font-size:15px;
+  cursor: pointer;
+  float: left;
+}
+
+#dashboard {
+  text-decoration:none;
+  height:40px;
+}
+
+#settings {
+  text-decoration:none;
+  height:40px;
+}
+
+a {
+  color: white;
+}
+
+#dashboard:hover {
+  text-decoration:none;
+}
+
+#settings:hover {
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:none;
+  color:white;
+}
+
+.content {
+  padding-left:10px;
+  width:300px;
+}
+
+#sidebar > p {
+  margin-top:15px;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector input {
+  margin-right:10px;
+}
+
+#type-selector input:first-of-type {
+  margin-left:5px;
+}
+
+.pac-controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  margin-right:20px;
+  font-weight: 300;
+}

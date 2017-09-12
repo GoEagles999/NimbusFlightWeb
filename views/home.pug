@@ -1,0 +1,18 @@
+extends layout-logged-in
+    
+block content
+  .container-fluid
+    .panel.panel-default
+      .panel-heading
+        h3 Welcome to Nimbus
+      .panel-body
+        h4 Quick Start
+        p To create a 3D model of your mapped area and/or plan a flight, click 'Platform' located in the right corner.
+        p Please join the discussion on our forum, where you can meet fellow professionals and amateurs to discuss flying drones, best practices, and receive practical advice.
+        p If you have any questions about our product, please submit a support ticket #[a(href='support') here].
+        h4(style='margin-top:20px;') YOUR ACCOUNT
+        p Your Current Subscription Plan: #[span(style='font-weight:bold') #{subscriptionPlan}]
+        ul
+          li 10 maps per month
+          li maximum images per map: 700
+        button Upgrade to Premium for Larger Mappable Areas and Faster Processing Times

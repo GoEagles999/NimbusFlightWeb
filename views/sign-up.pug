@@ -1,0 +1,115 @@
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Sign Up | Nimbus
+    // Bootstrap core CSS
+    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    // Custom fonts for this theme
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900', rel='stylesheet', type='text/css')
+    // Plugin CSS
+    link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='vendor/owl-carousel/owl.carousel.css', rel='stylesheet', type='text/css')
+    link(href='vendor/owl-carousel/owl.theme.css', rel='stylesheet', type='text/css')
+    link(href='vendor/owl-carousel/owl.transitions.css', rel='stylesheet', type='text/css')
+    link(href='vendor/magnific-popup/magnific-popup.css', rel='stylesheet', type='text/css')
+    link(href='vendor/animate.css/animate.min.css', rel='stylesheet', type='text/css')
+    link(href='device-mockups/device-mockups.min.css', rel='stylesheet', type='text/css')
+    // jQuery
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
+    link(href='css/vitality-blue.css', rel='stylesheet', type='text/css')
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase-auth.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js")
+    script(src="/javascripts/everythingElse.js")
+  body
+    // Navigation
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href="http://www.nimbusflight.io/" style='float:left;margin-right:500px;') Nimbus
+          ul.nav.navbar-nav.navbar(style='float:right;margin-left:500px;')
+            li
+              a(href='sign-in' style='border-radius:5px;') Log In
+              a(style='float:left;margin-right:10px;') Already have an account?
+    .panel.panel-default
+      .panel-body(style='text-align:center;')
+        h2 Get Started With a Free Account
+        p Start your 30-day free trial of Nimbus. No credit card required. Trial limited to 10 maps and models.
+        .form-group(style='padding-top:30px;')
+          label.col-md-3.control-label(for='firstname') First Name
+          .col-md-4
+            input.form-control(type='text', name='firstname', placeholder='First Name')
+        .form-group
+          label.col-md-3.control-label(for='lastname') Last Name
+          .col-md-4
+            input.form-control(type='text', name='lastname', placeholder='Last Name')
+        .form-group
+          label.col-md-3.control-label(for='email') E-mail address
+          .col-md-4
+            input.form-control(type='email', name='email', placeholder='E-mail Address')
+        .form-group
+          label.col-md-3.control-label(for='company') Company
+          .col-md-4
+            input.form-control(type='text', name='company', placeholder='Company')
+        .form-group
+          label.col-md-3.control-label(for='industry') Industry
+          .col-md-4
+            select#industries.form-control
+              option(value='Please select your industry') Please select your industry
+              option(value='Agriculture') Agriculture
+              option(value='Construction') Construction
+              option(value='Drone Service') Drone Service
+              option(value='Surveying') Surveying
+              option(value='Enthusiast') Enthusiast
+        .form-group
+          label.col-md-3.control-label(for='phone') Phone Number
+          .col-md-4
+            input.form-control(type='text', name='phone', placeholder='Optional')
+        .form-group
+          label.col-md-3.control-label(for='password') Password
+          .col-md-4
+            input.form-control(type='password', name='password', placeholder='Password')
+        .form-group
+          label.col-md-3.control-label(for='confirmPassword') Confirm Password
+          .col-md-4
+            input.form-control(type='password', name='confirmPassword', placeholder='Confirm Password')
+        .form-group
+          label.col-md-3.control-label(for='source') How did you hear about us?
+          .col-md-4
+            input.form-control(type='text', name='source', placeholder='Source')
+        .form-group
+          .col-md-offset-3.col-md-9
+            button#sign-up.btn.btn-info(type='button') Sign Up
+        div#errorbox(style='color: red;text-align:center;margin-top:10px;')
+        .form-group(style='padding-top:20px')
+          .col-md-offset-3.col-md-9
+            button#facebookSignUp.btn.btn-primary(type='button' style='padding-left:20px; padding-right:20px;margin-left:70px; margin-top:10px; background-color: #5bc0de !important;') Sign Up with Facebook
+        .form-group(style='padding-top:0px')
+          .col-md-offset-3.col-md-9
+            button#googleSignUp.btn.btn-primary(type='button' style='padding-left: 28px; padding-right: 28px; margin-left:70px; margin-top:10px; background-color: #5bc0de !important;') Sign Up with Google
+        .form-group(style='padding-top:0px')
+          .col-md-offset-3.col-md-9
+            button#twitterSignUp.btn.btn-primary(type='button' style='padding-left: 30px; padding-right: 30px;margin-left:70px; margin-top:10px; background-color: #5bc0de !important;') Sign Up with Twitter
+  
+    // Bootstrap core JavaScript
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/tether/tether.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.min.js')
+    // Plugin JavaScript
+    script(src='vendor/jquery.easing/jquery.easing.min.js')
+    script(src='vendor/owl-carousel/owl.carousel.js')
+    script(src='vendor/magnific-popup/jquery.magnific-popup.min.js')
+    script(src='vendor/vide/jquery.vide.min.js')
+    script(src='vendor/mixitup/mixitup.min.js')
+    script(src='vendor/wowjs/wow.min.js')
+    // Contact form JavaScript
+    script(src='js/contact_me.js')
+    script(src='js/jqBootstrapValidation.js')
+    // Custom scripts for this theme
+    script(src='js/vitality.js')
+    script(src='js/vitality-mixitup.js')

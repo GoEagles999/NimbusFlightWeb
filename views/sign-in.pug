@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://getbootstrap.com/dist/css/bootstrap.min.css')
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase-auth.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js", integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=", crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js", integrity="sha256-UzSbSKd9UMo8E8MPnTx9OTfXYin6xmVHCnmOOUDYn68=", crossorigin="anonymous")
+    script(src="/javascripts/everythingElse.js")
+    script(src='/javascripts/analytics.js')
+  body
+    .container(style='width:300px;margin-top:30px;')
+      h4(style='text-align:center;') Log In
+      label(style='font-weight:normal;') Username
+      .form-group
+        input#email.form-control(type='email' placeholder='Username' required='' autofocus='')
+      label(style='font-weight:normal;') Password
+      .form-group
+        input#password.form-control(type='password' placeholder='Password' required='')
+      a(style='font-size:15px;' href='sign-up') Don't have an account? Sign up here.
+      div(style='margin-top:5px;')
+      a#forgot-pw(style='font-size:15px;cursor:pointer;') Forgot Password?
+      button#sign-in.btn.btn-lg.btn-primary.btn-block(type='submit' style='margin-top:10px;font-size:14px;') Login
+      div#errorbox(style='color: red;margin-top:10px;')

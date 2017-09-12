@@ -1,0 +1,539 @@
+//don't forget to use '.bg-faded' if want to make background of section faded (light grey)
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title= title
+    // google analytics
+    script(src='/javascripts/analytics.js')
+    // Bootstrap core CSS
+    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    // Custom fonts for this theme
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900', rel='stylesheet', type='text/css')
+    // Plugin CSS
+    link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='vendor/owl-carousel/owl.carousel.css', rel='stylesheet', type='text/css')
+    link(href='vendor/owl-carousel/owl.theme.css', rel='stylesheet', type='text/css')
+    link(href='vendor/owl-carousel/owl.transitions.css', rel='stylesheet', type='text/css')
+    link(href='vendor/magnific-popup/magnific-popup.css', rel='stylesheet', type='text/css')
+    link(href='vendor/animate.css/animate.min.css', rel='stylesheet', type='text/css')
+    link(href='device-mockups/device-mockups.min.css', rel='stylesheet', type='text/css')
+    // Custom styles for this theme
+    // Uncomment the color scheme you want to use! Red is chosen by default!
+    link(href='css/vitality-blue.css', rel='stylesheet', type='text/css')
+    // <link href="css/vitality-aqua.css" rel="stylesheet" type="text/css">
+    // <link href="css/vitality-blue.css" rel="stylesheet" type="text/css">
+    // <link href="css/vitality-green.css" rel="stylesheet" type="text/css">
+    // <link href="css/vitality-orange.css" rel="stylesheet" type="text/css">
+    // <link href="css/vitality-pink.css" rel="stylesheet" type="text/css">
+    // <link href="css/vitality-purple.css" rel="stylesheet" type="text/css">
+    // <link href="css/vitality-tan.css" rel="stylesheet" type="text/css">
+    // <link href="css/vitality-turquoise.css" rel="stylesheet" type="text/css">
+    // <link href="css/vitality-yellow.css" rel="stylesheet" type="text/css">
+    // Temporary navbar container fix
+    style.
+      .navbar-toggler {
+      z-index: 1;
+      }
+      @media (max-width: 576px) {
+      nav > .container {
+      width: 100%;
+      }
+      }
+  body#page-top
+    // Navigation
+    nav#mainNav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse.navbar-expanded(style='padding:5px;')
+      .container
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          | Menu 
+          i.fa.fa-bars
+        a.navbar-brand.page-scroll(href='#page-top')
+          img.img-fluid(src='img/agency/nimbus_logo.svg', alt='')
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link.page-scroll(href='#about') About
+            li.nav-item
+              a.nav-link.page-scroll(href='#products') Products
+            li.nav-item
+              a.nav-link.page-scroll(href='#pricing') Pricing
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link.page-scroll(href='sign-up' style='background-color:rgba(10,143,213,1); border-radius:5px;padding-left:20px;padding-right:20px;padding-top:10px;padding-bottom:10px;margin-top:5px;') Sign Up
+            li.nav-item
+              a.nav-link.page-scroll(href='sign-in' style='border-radius:5px;padding-top:15px;') Log In
+    // Masthead
+    header.masthead(style="background-image: url('img/agency/backgrounds/bg-header.jpg');")
+      .container.h-100
+        .row.h-100
+          .col-12.my-auto.text-center.text-white
+            //img.masthead-img.img-fluid.mb-3(src='img/agency/profile.svg', alt='')
+            .masthead-title(style='font-size:40px;font-family: Arial;') Software for Image Processing & Flight Planning
+            hr.colored
+            .masthead-subtitle Discounted prices and lowered processing times
+      .scroll-down
+        a.btn.page-scroll(href='#pricing')
+          i.fa.fa-angle-down.fa-fw(style='margin-top:8px;')
+    // About Section
+    section#about.page-section
+      .container-fluid
+        .text-center
+          h1 About
+          p.mb-0 Nimbus is dedicated to providing affordable and easy to use drone software.
+        hr.colored
+        .row.text-center
+          .col-lg-4.col-md-8
+            i.fa.fa-code.fa-4x
+            h3 Fly
+            p.mb-0
+              | Our easy to use drone flight planning platform allows you to plan missions, automatically fly and monitor flights.
+          .col-lg-4.col-md-8
+            i.fa.fa-edit.fa-4x
+            h3 Process
+            p.mb-0
+              | Upload your drone flight imagery, process them within hours and get a complete 2D and 3D model model of your mapped area with useful information.
+          .col-lg-4.col-md-8
+            i.fa.fa-tablet.fa-4x
+            h3 Collaborate
+            p.mb-0
+              | Join our private forum to share tips and best practice flying techniques with fellow professionals and amateurs, boosting your productivity.
+    // Call to Action
+    section.call-to-action(style="background-image: url('img/agency/backgrounds/bg-quote.jpg');")
+      .container
+        .row
+          .col-md-10.offset-md-1
+            span.quote
+              | Good 
+              span.text-primary design
+              |  is finding that perfect balance between the way something 
+              span.text-primary looks
+              |  and how it 
+              span.text-primary functions
+              | .
+            hr.colored
+            a.btn.btn-primary.page-scroll(href='#services') How We Work
+    // Services Section
+    section#products.page-section.services
+      .container
+        .text-center
+          h2 Products
+          hr.colored
+          p.mb-0 Here is an overview of how we approach each new project.
+        .row.mt-4
+          // Service Item 1
+          .col-lg-4
+            .media
+              i.fa.fa-clipboard.rounded-circle
+              .media-body
+                h3.media-heading Plan
+                ul
+                  li Client interview
+                  li Gather consumer data
+                  li Create content strategy
+                  li Analyze research
+          // Service Item 2
+          .col-lg-4
+            .media
+              i.fa.fa-pencil.rounded-circle
+              .media-body
+                h3.media-heading Create
+                ul
+                  li Build wireframe
+                  li Gather client feedback
+                  li Code development
+                  li Marketing review
+          // Service Item 3
+          .col-lg-4
+            .media
+              i.fa.fa-rocket.rounded-circle
+              .media-body
+                h3.media-heading Launch
+                ul
+                  li Deploy website
+                  li Market product launch
+                  li Collect UX data
+                  li Quarterly maintenence
+    // Portfolio Carousel
+    .portfolio-carousel.wow.owl-carousel.owl-theme
+      // Portfolio Carousel Item 1
+      .item(style="background-image: url('img/agency/portfolio/carousel/bg-1.jpg')")
+        .container-fluid
+          .row.h-100
+            .col-md-5.push-md-7.my-auto
+              .project-details
+                span.project-name Efficiency
+                span.project-description Save on your drone imagery processing cost.
+                hr.colored
+                a.btn.btn-primary(href='#portfolioModal1', data-toggle='modal')
+                  | View Details 
+                  i.fa.fa-long-arrow-right.fa-fw
+            .col-md-7.pull-md-5.hidden-xs.my-auto
+              .device-container
+                .device-mockup.macbook.portrait.black
+                      img.img-fluid(src='img/agency/portfolio/carousel/screen.png', alt='')
+      // Portfolio Carousel Item 2
+      .item(style="background-image: url('img/agency/portfolio/carousel/bg-2.jpg')")
+        .container-fluid
+          .row.h-100
+            .col-md-5.push-md-7.my-auto
+              .project-details
+                span.project-name Project Name
+                span.project-description Branding, Website Design
+                hr.colored
+                a.btn.btn-primary(href='#portfolioModal2', data-toggle='modal')
+                  | View Details 
+                  i.fa.fa-long-arrow-right.fa-fw
+            .col-md-7.pull-md-5.hidden-xs.my-auto
+              .device-container
+                .device-mockup.macbook.portrait.black
+                  .device
+                    .screen
+                      img.img-fluid(src='img/agency/portfolio/carousel/screen-2a.jpg', alt='')
+      // Portfolio Carousel Item 3
+      .item(style="background-image: url('img/agency/portfolio/carousel/bg-3.jpg')")
+        .container-fluid
+          .row.h-100
+            .col-md-5.push-md-7.my-auto
+              .project-details
+                span.project-name Project Name
+                span.project-description Branding, Website Design
+                hr.colored
+                a.btn.btn-primary(href='#portfolioModal3', data-toggle='modal')
+                  | View Details 
+                  i.fa.fa-long-arrow-right.fa-fw
+            .col-md-7.pull-md-5.hidden-xs.my-auto
+              .device-container
+                .device-mockup.macbook.portrait.black
+                  .device
+                    .screen
+                      img.img-fluid(src='img/agency/portfolio/carousel/screen-3a.jpg', alt='')
+      // Portfolio Carousel Item 4
+      .item(style="background-image: url('img/agency/portfolio/carousel/bg-4.jpg')")
+        .container-fluid
+          .row.h-100
+            .col-md-5.push-md-7.my-auto
+              .project-details
+                span.project-name Project Name
+                span.project-description Branding, Website Design
+                hr.colored
+                a.btn.btn-primary(href='#portfolioModal4', data-toggle='modal')
+                  | View Details 
+                  i.fa.fa-long-arrow-right.fa-fw
+            .col-md-7.pull-md-5.hidden-xs.my-auto
+              .device-container
+                .device-mockup.macbook.portrait.black
+                  .device
+                    .screen
+                      img.img-fluid(src='img/agency/portfolio/carousel/screen-4.jpg', alt='')
+    // Pricing Section
+    section#pricing.page-section.pricing(style="background-image: none;")
+      .container
+        .text-center
+          h2 Pricing
+          hr.colored
+        .row
+          // Pricing Table 1
+          .col-md-4
+            .pricing-item.featured-first
+              h3 Free
+              hr.colored
+              .price
+                span.number
+                  sup $
+                  | 0
+                |  / month
+              ul.list-group.mb-3
+                li.list-group-item 1 User
+                li.list-group-item Maximum 250 photos per map
+                li.list-group-item 24-hour processing time
+                li.list-group-item 5 GB storage
+                li.list-group-item Maximum resolution: 5 cm/pixel
+                li.list-group-item Vegetation Index
+                li.list-group-item Auto Waypoint Mission
+                li.list-group-item Pre-flight Checklist
+                li.list-group-item Weather
+                li.list-group-item Airspace Safety
+                li.list-group-item Telemetry
+                li.list-group-item Community Support
+              a.btn.btn-secondary(href='#') Sign Up
+          // Pricing Table 2
+          .col-md-4
+            .pricing-item.featured-first
+              h3 Professional
+              hr.colored
+              .price
+                span.number
+                  sup $
+                  | 0
+                |  / month
+              ul.list-group.mb-3
+                li.list-group-item 1 User
+                li.list-group-item Maximum 1,500 photos per map
+                li.list-group-item 5-hour processing time
+                li.list-group-item 5 GB storage + .25 cents per any additional GB of storage
+                li.list-group-item Maximum resolution: 5 cm/pixel
+                li.list-group-item Export 3D Point Cloud
+                li.list-group-item 3D Model
+                li.list-group-item Digital Elevation Model
+                li.list-group-item Orthomosaic
+                li.list-group-item Vegetation Index
+                li.list-group-item Measurement of distance, area & volume
+                li.list-group-item Ground Control Points
+                li.list-group-item Operations Management
+                li.list-group-item Export Telemetry Log
+                li.list-group-item Full-screen first-person view
+                li.list-group-item Quick Stitching
+                li.list-group-item Object Tracking
+                li.list-group-item E-mail Support
+              a.btn.btn-secondary(href='#') Sign Up
+          // Pricing Table 3
+          .col-md-4
+            .pricing-item.featured-first
+              h3 Business
+              hr.colored
+              .price
+                span.number
+                  sup $
+                  | 75
+                |  / month
+              ul.list-group.mb-3
+                li.list-group-item 3 User
+                li.list-group-item Maximum 3,500 photos per map
+                li.list-group-item 2-hour processing time
+                li.list-group-item 5 GB storage + .25 cents per any additional GB of storage
+                li.list-group-item Maximum resolution: 5 cm/pixel
+                li.list-group-item Export 3D Point Cloud
+                li.list-group-item 3D Model
+                li.list-group-item Digital Elevation Model
+                li.list-group-item Orthomosaic
+                li.list-group-item Vegetation Index
+                li.list-group-item Measurement of distance, area & volume
+                li.list-group-item Ground Control Points
+                li.list-group-item Operations Management
+                li.list-group-item Export Telemetry Log
+                li.list-group-item Full-screen first-person view
+                li.list-group-item Quick Stitching
+                li.list-group-item Object Counting
+                li.list-group-item Object Tracking
+                li.list-group-item Custom Branding
+                li.list-group-item Desktop Software
+                li.list-group-item Compliance
+                li.list-group-item Multiple Drones
+                li.list-group-item Internet Control
+                li.list-group-item E-mail/Phone Support
+              a.btn.btn-secondary(href='#') Sign Up
+    // Block Button Call to Action
+    //a.btn.btn-block.btn-full-width(href='https://wrapbootstrap.com/theme/vitality-multipurpose-one-page-theme-WB02K3KK3') Start a Free Trial Today!
+    // Footer
+    footer.footer(style="background-image: url('img/agency/backgrounds/bg-footer.jpg')")
+      .container.text-center
+        .row.footer-social
+          .col-lg-12
+            ul.list-inline
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-facebook.fa-fw.fa-2x
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-twitter.fa-fw.fa-2x
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-linkedin.fa-fw.fa-2x
+        p.copyright © Nimbus Flight LLC
+    // Portfolio Modals
+    // Example Modal 1: Corresponds with Portfolio Carousel Item 1
+    #portfolioModal1.portfolio-modal.modal(tabindex='-1', role='dialog', aria-hidden='true', style="background-image: url('img/agency/portfolio/carousel/bg-1.jpg')")
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .modal-body
+            .container
+              .row
+                .col-lg-8.offset-lg-2
+                  h2 Project Name
+                  hr.colored
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.
+                .col-lg-8.offset-lg-2
+                  .device-mockup.macbook.portrait.black
+                    .device
+                      .screen
+                        // Modal Mockup Option 1: Single Image (Uncomment Below to Use)
+                        // <img src="img/agency/portfolio/carousel/screen-1a.jpg" class="img-fluid" alt="">
+                        // Modal Mockup Option 2: Carousel (Example In Use Below)
+                        .mockup-carousel
+                          .item
+                            img.img-fluid(src='img/agency/portfolio/carousel/screen-1a.jpg', alt='')
+                          .item
+                            img.img-fluid(src='img/agency/portfolio/carousel/screen-1b.jpg', alt='')
+                          .item
+                            img.img-fluid(src='img/agency/portfolio/carousel/screen-1c.jpg', alt='')
+                .col-lg-8.offset-lg-2
+                  ul.list-inline.item-details
+                    li
+                      | Client: 
+                      strong Start Bootstrap
+                    li
+                      | Date: 
+                      strong April 2017
+                    li
+                      | Service: 
+                      strong Web Development
+                  button.btn.btn-primary(type='button', data-dismiss='modal')
+                    i.fa.fa-times
+                    |  Close
+    // Example Modal 2: Corresponds with Portfolio Carousel Item 2
+    #portfolioModal2.portfolio-modal.modal(tabindex='-1', role='dialog', aria-hidden='true', style="background-image: url('img/agency/portfolio/carousel/bg-2.jpg')")
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .modal-body
+            .container
+              .row
+                .col-lg-8.offset-lg-2
+                  h2 Project Name
+                  hr.colored
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.
+                .col-lg-8.offset-lg-2
+                  .device-mockup.macbook.portrait.black
+                    .device
+                      .screen
+                        // Modal Mockup Option 1: Single Image (Uncomment Below to Use)
+                        // <img src="img/agency/portfolio/carousel/screen-2a.jpg" class="img-fluid" alt="">
+                        // Modal Mockup Option 2: Carousel (Example In Use Below)
+                        .mockup-carousel
+                          .item
+                            img.img-fluid(src='img/agency/portfolio/carousel/screen-2a.jpg', alt='')
+                          .item
+                            img.img-fluid(src='img/agency/portfolio/carousel/screen-2b.jpg', alt='')
+                          .item
+                            img.img-fluid(src='img/agency/portfolio/carousel/screen-2c.jpg', alt='')
+                .col-lg-8.offset-lg-2
+                  ul.list-inline.item-details
+                    li
+                      | Client: 
+                      strong Start Bootstrap
+                    li
+                      | Date: 
+                      strong April 2017
+                    li
+                      | Service: 
+                      strong Web Development
+                  button.btn.btn-primary(type='button', data-dismiss='modal')
+                    i.fa.fa-times
+                    |  Close
+    // Example Modal 3: Corresponds with Portfolio Carousel Item 3
+    #portfolioModal3.portfolio-modal.modal(tabindex='-1', role='dialog', aria-hidden='true', style="background-image: url('img/agency/portfolio/carousel/bg-3.jpg')")
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .modal-body
+            .container
+              .row
+                .col-lg-8.offset-lg-2
+                  h2 Project Name
+                  hr.colored
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.
+                .col-lg-8.offset-lg-2
+                  .device-mockup.macbook.portrait.black
+                    .device
+                      .screen
+                        // Modal Mockup Option 1: Single Image (Uncomment Below to Use)
+                        // <img src="img/agency/portfolio/carousel/screen-2a.jpg" class="img-fluid" alt="">
+                        // Modal Mockup Option 2: Carousel (Example In Use Below)
+                        .mockup-carousel
+                          .item
+                            img.img-fluid(src='img/agency/portfolio/carousel/screen-3a.jpg', alt='')
+                          .item
+                            img.img-fluid(src='img/agency/portfolio/carousel/screen-3b.jpg', alt='')
+                          .item
+                            img.img-fluid(src='img/agency/portfolio/carousel/screen-3c.jpg', alt='')
+                .col-lg-8.offset-lg-2
+                  ul.list-inline.item-details
+                    li
+                      | Client: 
+                      strong Start Bootstrap
+                    li
+                      | Date: 
+                      strong April 2017
+                    li
+                      | Service: 
+                      strong Web Development
+                  button.btn.btn-primary(type='button', data-dismiss='modal')
+                    i.fa.fa-times
+                    |  Close
+    // Example Modal 4: Corresponds with Portfolio Carousel Item 4
+    #portfolioModal4.portfolio-modal.modal(tabindex='-1', role='dialog', aria-hidden='true', style="background-image: url('img/agency/portfolio/carousel/bg-4.jpg')")
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .modal-body
+            .container
+              .row
+                .col-lg-8.offset-lg-2
+                  h2 Project Name
+                  hr.colored
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.
+                .col-lg-8.offset-lg-2
+                  .device-mockup.macbook.portrait.black
+                    .device
+                      .screen
+                        // Modal Mockup Option 1: Single Image (Example In Use Below)
+                        img.img-fluid(src='img/agency/portfolio/carousel/screen-4.jpg', alt='')
+                        // Modal Mockup Option 2: Carousel (Uncomment Below to Use)
+                        //
+                          <div class="mockup-carousel">
+                          <div class="item">
+                          <img src="img/agency/portfolio/carousel/screen-1a.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="item">
+                          <img src="img/agency/portfolio/carousel/screen-2a.jpg" class="img-fluid" alt="">
+                          </div>
+                          <div class="item">
+                          <img src="img/agency/portfolio/carousel/screen-3a.jpg" class="img-fluid" alt="">
+                          </div>
+                          </div>
+                .col-lg-8.offset-lg-2
+                  ul.list-inline.item-details
+                    li
+                      | Client: 
+                      strong Start Bootstrap
+                    li
+                      | Date: 
+                      strong April 2017
+                    li
+                      | Service: 
+                      strong Web Development
+                  button.btn.btn-primary(type='button', data-dismiss='modal')
+                    i.fa.fa-times
+                    |  Close
+    // Bootstrap core JavaScript
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/tether/tether.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.min.js')
+    // Plugin JavaScript
+    script(src='vendor/jquery.easing/jquery.easing.min.js')
+    script(src='vendor/owl-carousel/owl.carousel.js')
+    script(src='vendor/magnific-popup/jquery.magnific-popup.min.js')
+    script(src='vendor/vide/jquery.vide.min.js')
+    script(src='vendor/mixitup/mixitup.min.js')
+    // Contact form JavaScript
+    script(src='js/contact_me.js')
+    script(src='js/jqBootstrapValidation.js')
+    // Custom scripts for this theme
+    script(src='js/vitality.js')
+    script(src='js/vitality-mixitup.js')

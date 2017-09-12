@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    title= title
+
+    //BOOTSTRAP CSS
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+
+    // jQuery
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
+
+    //Optional theme
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css", integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp", crossorigin="anonymous")
+    
+    //BOOTSTRAP JAVASCRIPT
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+
+    //ANGULAR
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js", integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=", crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js", integrity="sha256-UzSbSKd9UMo8E8MPnTx9OTfXYin6xmVHCnmOOUDYn68=", crossorigin="anonymous")
+
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase-app.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase-auth.js")
+    script(src="https://www.gstatic.com/firebasejs/3.9.0/firebase-database.js")
+    
+    script(src='/javascripts/everythingElse.js')
+    link(rel='stylesheet', href='/stylesheets/public-private.css')
+    link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900', rel='stylesheet', type='text/css')
+    link(href='css/vitality-blue.css', rel='stylesheet', type='text/css')
+
+  body
+    include ./header-logged-in.pug
+    .container-fluid
+      .panel.panel-default
+        .panel-heading
+          h3 My Account
+        .panel-body
+          div(style='width:350px;float:left;height:500px;')
+            h4(style='margin-bottom:20px;') Change Your Personal Details
+            p(style='font-weight:bold;font-size:1.2em;') First Name:
+              input.form-control#firstName(type='text' value=firstname size='20' style='margin-top:0px;margin-bottom:5px;')
+            p(style='font-weight:bold;font-size:1.2em;') Last Name:
+              input.form-control#lastName(type='text' value=lastname size='20' style='margin-top:0px;margin-bottom:5px;')
+            p(style='font-weight:bold;font-size:1.2em;') Company:
+              input.form-control#companyName(type='text' value=company size='20' style='margin-top:0px;margin-bottom:5px;')
+            p(style='font-weight:bold;font-size:1.2em;') Phone number:
+              input.form-control#phoneNumber(type='text' value=phone size='20' style='margin-top:0px;margin-bottom:5px;')
+            p(style='font-weight:bold;font-size:1.2em;') E-mail address:
+              input.form-control#newEmailAddress(type='text' value=email size='20' style='margin-top:0px;margin-bottom:0px;')
+            button.btn#saveChanges(type='button' style='float:left;') Save Changes
+            div#msgBoxForGeneral(style='margin-top:15px;')
+          div(style='width:350px;float:left;height:330px;')
+            h4(style='margin-bottom:20px;') Change Your Password
+            p(style='font-weight:bold;font-size:1.2em;') Current password:
+              input.form-control(type='password' id='currentPassword' size='20' style='margin-bottom:5px;margin-top:0px;')
+            p(style='font-weight:bold;font-size:1.2em;') New password:
+              input.form-control(type='password' id='newpassword1' size='20' style='margin-bottom:5px;margin-top:0px;')
+            p(style='font-weight:bold;font-size:1.2em;') Confirm new password:
+              input.form-control(type='password' id='newPassword2' size='20' style='margin-bottom:0px;margin-top:0px;')
+            button.btn#changePassword(type='button' style='float:left;') Change Password
+            div#msgBoxForPassword(style='margin-top:15px;')
